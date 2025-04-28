@@ -40,7 +40,7 @@ export default function Login({ status, canResetPassword }) {
                         type="email"
                         name="email"
                         value={data.email}
-                        className="mt-1 block w-full"
+                        className="mt-1 block w-full text-black"
                         autoComplete="username"
                         isFocused={true}
                         onChange={(e) => setData('email', e.target.value)}
@@ -57,7 +57,7 @@ export default function Login({ status, canResetPassword }) {
                         type="password"
                         name="password"
                         value={data.password}
-                        className="mt-1 block w-full"
+                        className="mt-1 block w-full text-black"
                         autoComplete="current-password"
                         onChange={(e) => setData('password', e.target.value)}
                     />
@@ -65,7 +65,7 @@ export default function Login({ status, canResetPassword }) {
                     <InputError message={errors.password} className="mt-2" />
                 </div>
 
-                <div className="mt-4 block">
+                <div className="mt-4 flex justify-between">
                     <label className="flex items-center">
                         <Checkbox
                             name="remember"
@@ -78,9 +78,6 @@ export default function Login({ status, canResetPassword }) {
                             Remember me
                         </span>
                     </label>
-                </div>
-
-                <div className="mt-4 flex items-center justify-end">
                     {canResetPassword && (
                         <Link
                             href={route('password.request')}
@@ -89,10 +86,33 @@ export default function Login({ status, canResetPassword }) {
                             Forgot your password?
                         </Link>
                     )}
+                </div>
 
-                    <PrimaryButton className="ms-4" disabled={processing}>
+                <div className="mt-4 flex items-center justify-end">
+                    <PrimaryButton className="ms-4 bg-gradient-to-r from-gradient-start to-gradient-end text-white px-4 py-2 rounded hover:from-gradient-start-hover hover:to-gradient-end-hover transition-all duration-300" disabled={processing}>
                         Log in
                     </PrimaryButton>
+                </div>
+                <div className="mt-4 flex gap-y-2 flex-col items-center justify-center">
+                    <h4 className='className="rounded-md text-sm text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"'>Don't have an account?</h4>
+                    <Link
+                        href={route('register')}
+                        className="ms-4 bg-gradient-to-r from-gradient-start to-gradient-end text-white px-4 py-2 rounded hover:from-gradient-start-hover hover:to-gradient-end-hover transition-all duration-300"
+                    >
+                        Register
+                    </Link>
+                    {/* {canResetPassword && (
+                        <Link
+                            href={route('password.request')}
+                            className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        >
+                            Forgot your password?
+                        </Link>
+                    )}
+
+                    <PrimaryButton className="ms-4 bg-gradient-to-r from-gradient-start to-gradient-end text-white px-4 py-2 rounded hover:from-gradient-start-hover hover:to-gradient-end-hover transition-all duration-300" disabled={processing}>
+                        Register
+                    </PrimaryButton> */}
                 </div>
             </form>
         </GuestLayout>

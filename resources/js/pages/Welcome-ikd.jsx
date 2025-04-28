@@ -37,7 +37,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                     />
                                 </svg>
                             </div>
-                            <nav className="-mx-3 flex flex-1 justify-end">
+                            {/* <nav className="-mx-3 flex flex-1 justify-end">
                                 {auth.user ? (
                                     <Link
                                         href={route('dashboard')}
@@ -61,7 +61,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
                                         </Link>
                                     </>
                                 )}
-                            </nav>
+                            </nav> */}
                         </header>
 
                         <main className="mt-6">

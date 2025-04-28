@@ -63,7 +63,7 @@ export default function Register() {
         <button
           type="submit"
           disabled={processing}
-          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+          className="bg-theme-color text-white px-4 py-2 rounded hover:bg-green-700"
         >
           Register
         </button>

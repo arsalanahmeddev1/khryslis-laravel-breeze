@@ -97,7 +97,7 @@ const Sidebar = ({ collapsed, onClose, isMobile, isSettingDashboard }) => {
 const NavItem = ({ iconLight, iconDark, title, path, collapsed, isTextOnly, onClick, isDarkMode, toggleDarkMode }) => (
   <>
     <Link
-      to={path}
+      href={path}
       className={`flex items-center w-full ${collapsed ? "px-2 justify-center" : "px-6"} nav-item group`}
       onClick={onClick}
     >

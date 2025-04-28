@@ -37,6 +37,8 @@ import video4 from "../assets/images/video-4.png";
 import profileIcon from "../assets/icons/profile.png";
 import blipsIcon from "../assets/icons/blips.png";
 
+// 
+import logo from "../assets/images/logo.png";
 
 
 // Export all as named exports
@@ -74,4 +76,5 @@ export {
   video4,
   profileIcon,
   blipsIcon,
+  logo,
 };

@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router-dom'
+import { Link } from '@inertiajs/react'
 import MyContext from '../router/context'
 import { useContext } from 'react'
 import { useState, useEffect } from 'react'
