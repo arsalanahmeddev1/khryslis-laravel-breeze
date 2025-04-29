@@ -1,11 +1,11 @@
-import { Link, useLocation } from "react-router-dom"
-import { useState, useEffect } from "react"
-import Skeleton from "react-loading-skeleton"
-import { useData } from "../../contexts/DataContext"
+import { Link, usePage } from '@inertiajs/react';
+import { useState, useEffect } from "react";
+import Skeleton from "react-loading-skeleton";
+import { useData } from "../../contexts/DataContext";
 
 const StudioSidebar = ({ collapsed, onClose, isMobile }) => {
   const [isLoading, setIsLoading] = useState(true)
-  const location = useLocation()
+  const location = usePage()
   const { currentChannel } = useData()
 
   useEffect(() => {
@@ -94,7 +94,7 @@ const StudioSidebar = ({ collapsed, onClose, isMobile }) => {
 
       {/* Studio Logo */}
       <div className="flex h-16 items-center px-4 border-b border-gray-200">
-        <Link to="/studio/dashboard" className="flex items-center space-x-2">
+        <Link href="/studio/dashboard" className="flex items-center space-x-2">
           {!collapsed && <span className="text-lg font-semibold text-black">Khryslis Studio</span>}
           {collapsed && <span className="text-lg font-semibold text-black">K</span>}
         </Link>
@@ -134,7 +134,7 @@ const StudioSidebar = ({ collapsed, onClose, isMobile }) => {
               return (
                 <Link
                   key={item.path}
-                  to={item.path}
+                  href={item.path}
                   className={`
                     ${
                       isActive
@@ -176,7 +176,7 @@ const StudioSidebar = ({ collapsed, onClose, isMobile }) => {
               {uploadItems.map((item) => (
                 <Link
                   key={item.path}
-                  to={item.path}
+                  href={item.path}
                   className="group flex items-center px-2 py-2 text-sm font-medium rounded-md text-gray-700 hover:bg-gray-50"
                   onClick={isMobile ? onClose : undefined}
                 >

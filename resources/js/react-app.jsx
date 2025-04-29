@@ -4,7 +4,7 @@ import { createInertiaApp } from '@inertiajs/react';
 import { createRoot } from 'react-dom/client';
 import { ThemeProvider } from './contexts/ThemeContext';
 import { SearchProvider } from './contexts/SearchContext';
-
+import { AppProviders } from './contexts/AppProviders';
 createInertiaApp({
   resolve: name => {
     const pages = import.meta.glob('./pages/**/*.jsx', { eager: true });
@@ -15,11 +15,14 @@ createInertiaApp({
   },
   setup({ el, App, props }) {
     createRoot(el).render(
-      <ThemeProvider>
-        <SearchProvider>
-          <App {...props} />
-        </SearchProvider>
-      </ThemeProvider>
+      <AppProviders>
+        <ThemeProvider>
+          <SearchProvider>
+            <App {...props} />
+          </SearchProvider>
+        </ThemeProvider>
+      </AppProviders>
+
     );
   },
 });

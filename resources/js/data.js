@@ -1096,3 +1096,587 @@ export const initialMusicData = [
   },
 ]
 
+
+// Mock gaming videos data
+export const getGamingVideos = () => {
+  return [
+    {
+      id: "pRpeEdMmmQ0",
+      title: "Minecraft, But It Gets More Realistic Every Minute",
+      thumbnail: "https://i.ytimg.com/vi/pRpeEdMmmQ0/maxresdefault.jpg",
+      channelName: "Fundy",
+      channelId: "UCqVEHtQoXHmUCfJ-9smpTSg",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 24000000,
+      publishedAt: "2021-02-26T18:00:11Z",
+      duration: 1021, // 17:01
+      gameName: "Minecraft",
+      categories: ["minecraft"],
+      isLive: false,
+    },
+    {
+      id: "n8X9_MgEdCg",
+      title: "I Survived 100 Days in Ancient Greece on Minecraft...",
+      thumbnail: "https://i.ytimg.com/vi/n8X9_MgEdCg/maxresdefault.jpg",
+      channelName: "Forge Labs",
+      channelId: "UCElYTbuQdTaPni39c92c6yw",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 12000000,
+      publishedAt: "2022-01-15T16:00:00Z",
+      duration: 3602, // 1:00:02
+      gameName: "Minecraft",
+      categories: ["minecraft"],
+      isLive: false,
+    },
+    {
+      id: "0iOSVD1fitI",
+      title: "I Built the FASTEST Car in Forza Horizon 5",
+      thumbnail: "https://i.ytimg.com/vi/0iOSVD1fitI/maxresdefault.jpg",
+      channelName: "DanTDM",
+      channelId: "UCS5Oz6CHmeoF7vSad0qqXfw",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 8500000,
+      publishedAt: "2022-03-10T14:00:00Z",
+      duration: 1256, // 20:56
+      gameName: "Forza Horizon 5",
+      categories: ["action"],
+      isLive: false,
+    },
+    {
+      id: "live1",
+      title: "🔴 LIVE: Minecraft Hardcore Survival - Day 100!",
+      thumbnail: "https://i.ytimg.com/vi/jNQXAC9IVRw/maxresdefault.jpg",
+      channelName: "PewDiePie",
+      channelId: "UC-lHJZR3Gqxm24_Vd_AJ5Yw",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      liveViewers: 125000,
+      publishedAt: new Date().toISOString(),
+      gameName: "Minecraft",
+      categories: ["minecraft", "live"],
+      isLive: true,
+    },
+    {
+      id: "live2",
+      title: "🔴 Call of Duty: Modern Warfare III - Multiplayer Gameplay",
+      thumbnail: "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      channelName: "Dr Disrespect",
+      channelId: "UC6Ocu9G2hxDUw3jSxn5AJiA",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      liveViewers: 87500,
+      publishedAt: new Date().toISOString(),
+      gameName: "Call of Duty: MW III",
+      categories: ["fps", "live"],
+      isLive: true,
+    },
+    {
+      id: "Ul3y1LXxzdU",
+      title: "The Elder Scrolls VI - Official Teaser Trailer",
+      thumbnail: "https://i.ytimg.com/vi/OkFdqqyI8y4/maxresdefault.jpg",
+      channelName: "Bethesda Softworks",
+      channelId: "UCvZHe-SP3xC7DdOk4Ri8QBw",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 18500000,
+      publishedAt: "2023-01-05T14:15:00Z",
+      duration: 88, // 1:28
+      gameName: "The Elder Scrolls VI",
+      categories: ["rpg", "recently-uploaded"],
+      isLive: false,
+    },
+    {
+      id: "Uszj_k0DGsg",
+      title: "Elden Ring: Shadow of the Erdtree - Official Gameplay Reveal",
+      thumbnail: "https://i.ytimg.com/vi/YQzPyf0hsBI/maxresdefault.jpg",
+      channelName: "BANDAI NAMCO",
+      channelId: "UC0ydVlWiJv0Np_2tQrXLqvA",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 12600000,
+      publishedAt: "2023-02-05T10:30:00Z",
+      duration: 192, // 3:12
+      gameName: "Elden Ring",
+      categories: ["rpg", "action", "recently-uploaded"],
+      isLive: false,
+    },
+    {
+      id: "live3",
+      title: "🔴 League of Legends - Ranked Gameplay",
+      thumbnail: "https://i.ytimg.com/vi/mPL2OuoiT9s/maxresdefault.jpg",
+      channelName: "Faker",
+      channelId: "UC9TOpT3N5rJLGKPiJro_ctA",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      liveViewers: 65000,
+      publishedAt: new Date().toISOString(),
+      gameName: "League of Legends",
+      categories: ["strategy", "live"],
+      isLive: true,
+    },
+    {
+      id: "dQw4w9WgXcQ1",
+      title: "Starfield - 15 Tips & Tricks The Game Doesn't Tell You",
+      thumbnail: "https://i.ytimg.com/vi/LKEJv7XGcDY/maxresdefault.jpg",
+      channelName: "GameSpot",
+      channelId: "UCbu2SsF-Or3Rsw3M5gCjCrQ",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 2500000,
+      publishedAt: "2023-03-15T06:57:33Z",
+      duration: 853, // 14:13
+      gameName: "Starfield",
+      categories: ["rpg", "recently-uploaded"],
+      isLive: false,
+    },
+    {
+      id: "dQw4w9WgXcQ2",
+      title: "Cyberpunk 2077: Phantom Liberty - Official Gameplay Trailer",
+      thumbnail: "https://i.ytimg.com/vi/PbVKBoDuhZ0/maxresdefault.jpg",
+      channelName: "CD PROJEKT RED",
+      channelId: "UC4zyoIAzmdsgpDZQfO1-lSA",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 8700000,
+      publishedAt: "2023-03-20T12:34:56Z",
+      duration: 210, // 3:30
+      gameName: "Cyberpunk 2077",
+      categories: ["rpg", "action", "recently-uploaded"],
+      isLive: false,
+    },
+    {
+      id: "dQw4w9WgXcQ3",
+      title: "Valorant - How to Rank Up Fast in 2023",
+      thumbnail: "https://i.ytimg.com/vi/ulOvv_yYLTc/maxresdefault.jpg",
+      channelName: "Valorant Guides",
+      channelId: "UC1Ue7TuX3iH4y8d9QAi8FHQ",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 1400000,
+      publishedAt: "2023-02-17T06:57:33Z",
+      duration: 725, // 12:05
+      gameName: "Valorant",
+      categories: ["fps"],
+      isLive: false,
+    },
+    {
+      id: "dQw4w9WgXcQ4",
+      title: "Civilization VI - New Frontier Pass Overview",
+      thumbnail: "https://i.ytimg.com/vi/VW1m7sPJM4Y/maxresdefault.jpg",
+      channelName: "Civilization",
+      channelId: "UC5OrDvL9DscpcAstz7JnQGA",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 950000,
+      publishedAt: "2023-01-03T08:45:00Z",
+      duration: 394, // 6:34
+      gameName: "Civilization VI",
+      categories: ["strategy"],
+      isLive: false,
+    },
+    {
+      id: "dQw4w9WgXcQ5",
+      title: "Age of Empires IV - Gameplay Tips & Tricks",
+      thumbnail: "https://i.ytimg.com/vi/TTgQnXhD4Q8/maxresdefault.jpg",
+      channelName: "Age of Empires",
+      channelId: "UCiMhD4jzUqG-IgPzUmmytRQ",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 750000,
+      publishedAt: "2023-01-01T14:30:00Z",
+      duration: 855, // 14:15
+      gameName: "Age of Empires IV",
+      categories: ["strategy"],
+      isLive: false,
+    },
+    {
+      id: "dQw4w9WgXcQ6",
+      title: "Apex Legends - Season 18 Gameplay Trailer",
+      thumbnail: "https://i.ytimg.com/vi/innmNewjkuM/maxresdefault.jpg",
+      channelName: "Apex Legends",
+      channelId: "UCxYkZIJuDTVm_8zJrK7-FsQ",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 3750000,
+      publishedAt: "2023-04-25T18:20:00Z",
+      duration: 174, // 2:54
+      gameName: "Apex Legends",
+      categories: ["fps", "recently-uploaded"],
+      isLive: false,
+    },
+    {
+      id: "dQw4w9WgXcQ7",
+      title: "Hogwarts Legacy - Complete Walkthrough Part 1",
+      thumbnail: "https://i.ytimg.com/vi/ecgL-JV_Yrs/maxresdefault.jpg",
+      channelName: "IGN",
+      channelId: "UCIak6JLVOjuZxxXcGd3cZsg",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKZWeMCsx4Q9e_Hm6nhOOUQ3fv96QGUXiMr1-pPP=s176-c-k-c0x00ffffff-no-rj",
+      views: 4200000,
+      publishedAt: "2023-02-25T10:15:00Z",
+      duration: 3655, // 1:00:55
+      gameName: "Hogwarts Legacy",
+      categories: ["rpg", "action"],
+      isLive: false,
+    },
+    {
+      id: "dQw4w9WgXcQ8",
+      title: "Minecraft Dungeons - Full Game Walkthrough",
+      thumbnail: "https://i.ytimg.com/vi/KCbE47v1qVk/maxresdefault.jpg",
+      channelName: "TheRadBrad",
+      channelId: "UCFMZHIQMgBXwqHOX8_MdZ_g",
+      channelAvatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKaqca-xQcJtp9XfTdQx5-TeoFpCOeXGGQQC8GIQSg=s176-c-k-c0x00ffffff-no-rj",
+      views: 2800000,
+      publishedAt: "2023-03-16T22:45:00Z",
+      duration: 5401, // 1:30:01
+      gameName: "Minecraft Dungeons",
+      categories: ["minecraft", "action"],
+      isLive: false,
+    },
+  ]
+}
+
+// Mock channel data
+const channelsData = {
+  UCsBjURrPoezykLs9EqgamOA: {
+    channelInfo: {
+      id: "UCsBjURrPoezykLs9EqgamOA",
+      name: "Fireship",
+      avatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+      banner:
+        "https://yt3.googleusercontent.com/h5Jml_Ckp1D8LqzEUlUaLRiKPbmHJ4Vt4JGhTzpxD9LVgg8M-Mf5K8ORNfVTLKGxH0H_2gQYOg=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      subscribers: 2400000,
+      videoCount: 487,
+      customUrl: "@fireship",
+      description:
+        "High-intensity ⚡ code tutorials and tech news to help you ship your app faster. New videos every week covering the topics that real developers need to know about.",
+      joinedDate: "2017-04-05T15:26:48Z",
+      location: "United States",
+      totalViews: 178500000,
+      links: [
+        { title: "Website", url: "https://fireship.io", icon: "🌐" },
+        { title: "Twitter", url: "https://twitter.com/fireship_dev", icon: "🐦" },
+        { title: "GitHub", url: "https://github.com/fireship-io", icon: "💻" },
+        { title: "Discord", url: "https://discord.gg/fireship", icon: "💬" },
+      ],
+      playlists: [
+        {
+          id: "PLl-K7zZEsYLmOF_07IayrTntevxtbUxDL",
+          title: "100 Seconds of Code",
+          thumbnail: "https://i.ytimg.com/vi/DC471a9qrU4/maxresdefault.jpg",
+          videoCount: 48,
+        },
+        {
+          id: "PLl-K7zZEsYLmnJ_FpMOZgyg6XcIGBu2OX",
+          title: "Angular Essentials",
+          thumbnail: "https://i.ytimg.com/vi/G0bBLvWXBvc/maxresdefault.jpg",
+          videoCount: 12,
+        },
+        {
+          id: "PLl-K7zZEsYLn_iBS6QS5fvUZUfzxcRR7R",
+          title: "React Hooks",
+          thumbnail: "https://i.ytimg.com/vi/TNhaISOUy6Q/maxresdefault.jpg",
+          videoCount: 8,
+        },
+      ],
+      communityPosts: [
+        {
+          id: "post1",
+          channelName: "Fireship",
+          channelAvatar:
+            "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+          content: "Just launched a new course on Next.js 13! Check it out on fireship.io",
+          publishedAt: "2023-04-15T14:30:00Z",
+          likes: 12500,
+          dislikes: 120,
+          comments: 342,
+          image: "https://fireship.io/courses/nextjs/img/featured.png",
+        },
+        {
+          id: "post2",
+          channelName: "Fireship",
+          channelAvatar:
+            "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+          content: "What programming language should I learn next? Drop your suggestions in the comments!",
+          publishedAt: "2023-03-22T18:45:00Z",
+          likes: 8700,
+          dislikes: 85,
+          comments: 1243,
+        },
+      ],
+    },
+    videos: [
+      {
+        id: "dQw4w9WgXcQ",
+        title: "React 18 New Features Explained - What You Need to Know About the Latest Update",
+        thumbnail: "https://i.ytimg.com/vi/FZ0cG47msEk/maxresdefault.jpg",
+        channelName: "Fireship",
+        channelId: "UCsBjURrPoezykLs9EqgamOA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+        views: 856000,
+        publishedAt: "2023-03-15T10:15:00",
+        duration: 612, // 10:12
+        category: "Technology",
+      },
+      {
+        id: "Tn6-PIqc4UM",
+        title: "React in 100 Seconds",
+        thumbnail: "https://i.ytimg.com/vi/Tn6-PIqc4UM/maxresdefault.jpg",
+        channelName: "Fireship",
+        channelId: "UCsBjURrPoezykLs9EqgamOA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+        views: 1200000,
+        publishedAt: "2021-01-10T14:00:00",
+        duration: 100, // 1:40
+        category: "Technology",
+      },
+      {
+        id: "DHjZnJRK_S8",
+        title: "7 React Projects for Beginners in 2023",
+        thumbnail: "https://i.ytimg.com/vi/DHjZnJRK_S8/maxresdefault.jpg",
+        channelName: "Fireship",
+        channelId: "UCsBjURrPoezykLs9EqgamOA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+        views: 450000,
+        publishedAt: "2023-01-05T16:30:00",
+        duration: 720, // 12:00
+        category: "Technology",
+      },
+      {
+        id: "TNhaISOUy6Q",
+        title: "React Hooks Explained",
+        thumbnail: "https://i.ytimg.com/vi/TNhaISOUy6Q/maxresdefault.jpg",
+        channelName: "Fireship",
+        channelId: "UCsBjURrPoezykLs9EqgamOA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+        views: 980000,
+        publishedAt: "2022-06-20T11:15:00",
+        duration: 840, // 14:00
+        category: "Technology",
+      },
+      {
+        id: "Fy9SdZLBZOo",
+        title: "Next.js 13 - The Basics",
+        thumbnail: "https://i.ytimg.com/vi/Fy9SdZLBZOo/maxresdefault.jpg",
+        channelName: "Fireship",
+        channelId: "UCsBjURrPoezykLs9EqgamOA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+        views: 750000,
+        publishedAt: "2022-11-10T09:45:00",
+        duration: 780, // 13:00
+        category: "Technology",
+      },
+      {
+        id: "qm0IfG1GyZU",
+        title: "7 TypeScript Tricks You Should Know",
+        thumbnail: "https://i.ytimg.com/vi/qm0IfG1GyZU/maxresdefault.jpg",
+        channelName: "Fireship",
+        channelId: "UCsBjURrPoezykLs9EqgamOA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+        views: 620000,
+        publishedAt: "2022-08-15T13:20:00",
+        duration: 540, // 9:00
+        category: "Technology",
+      },
+      {
+        id: "jS4aFq5-91M",
+        title: "JavaScript Interview Questions",
+        thumbnail: "https://i.ytimg.com/vi/jS4aFq5-91M/maxresdefault.jpg",
+        channelName: "Fireship",
+        channelId: "UCsBjURrPoezykLs9EqgamOA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+        views: 890000,
+        publishedAt: "2022-05-05T10:30:00",
+        duration: 660, // 11:00
+        category: "Technology",
+      },
+      {
+        id: "cuHDQwQvXW4",
+        title: "Tailwind CSS in 100 Seconds",
+        thumbnail: "https://i.ytimg.com/vi/cuHDQwQvXW4/maxresdefault.jpg",
+        channelName: "Fireship",
+        channelId: "UCsBjURrPoezykLs9EqgamOA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKb--NH6RwAGHYsD3KfxX-SAgWgIHrjR5E4Jb5SDSQ=s176-c-k-c0x00ffffff-no-rj",
+        views: 1100000,
+        publishedAt: "2021-03-25T14:10:00",
+        duration: 100, // 1:40
+        category: "Technology",
+      },
+    ],
+  },
+  UC29ju8bIPH5as8OGnQzwJyA: {
+    channelInfo: {
+      id: "UC29ju8bIPH5as8OGnQzwJyA",
+      name: "Traversy Media",
+      avatar:
+        "https://yt3.googleusercontent.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s176-c-k-c0x00ffffff-no-rj",
+      banner:
+        "https://yt3.googleusercontent.com/I6_E2PxV5vNQVKWR3NsSsXb5h7ZnFtoZGFXookgFjGI4_iZ3O0-jybuilders-Wy9Dl0jUQaXYnGTY=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+      subscribers: 2100000,
+      videoCount: 892,
+      customUrl: "@traversymedia",
+      description:
+        "Traversy Media features the best online web development and programming tutorials for all of the latest web technologies including Node.js, Angular, React, Vue.js, PHP, Rails, HTML, CSS and much more.",
+      joinedDate: "2009-10-30T21:33:14Z",
+      location: "United States",
+      totalViews: 156000000,
+      links: [
+        { title: "Website", url: "https://traversymedia.com", icon: "🌐" },
+        { title: "Twitter", url: "https://twitter.com/traversymedia", icon: "🐦" },
+        { title: "GitHub", url: "https://github.com/bradtraversy", icon: "💻" },
+        { title: "Discord", url: "https://discord.gg/traversymedia", icon: "💬" },
+      ],
+      playlists: [
+        {
+          id: "PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX",
+          title: "MERN Stack Front To Back",
+          thumbnail: "https://i.ytimg.com/vi/PBTYxXADG_k/maxresdefault.jpg",
+          videoCount: 12,
+        },
+        {
+          id: "PLillGF-RfqbY3c2r0htQyVbDJJoBFE6Rb",
+          title: "React Front To Back",
+          thumbnail: "https://i.ytimg.com/vi/w7ejDZ8SWv8/maxresdefault.jpg",
+          videoCount: 15,
+        },
+        {
+          id: "PLillGF-RfqbZ7s3t6ZInY3NjEOOX7hsBv",
+          title: "Modern JavaScript From The Beginning",
+          thumbnail: "https://i.ytimg.com/vi/hdI2bqOjy3c/maxresdefault.jpg",
+          videoCount: 14,
+        },
+      ],
+      communityPosts: [
+        {
+          id: "post1",
+          channelName: "Traversy Media",
+          channelAvatar:
+            "https://yt3.googleusercontent.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s176-c-k-c0x00ffffff-no-rj",
+          content:
+            "Just released a new course on the MERN stack! Check it out on Udemy with a special discount for my subscribers.",
+          publishedAt: "2023-03-10T12:30:00Z",
+          likes: 8200,
+          dislikes: 45,
+          comments: 267,
+          image: "https://i.ytimg.com/vi/PBTYxXADG_k/maxresdefault.jpg",
+        },
+        {
+          id: "post2",
+          channelName: "Traversy Media",
+          channelAvatar:
+            "https://yt3.googleusercontent.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s176-c-k-c0x00ffffff-no-rj",
+          content: "What tech stack should I cover next? Let me know in the comments!",
+          publishedAt: "2023-02-15T16:20:00Z",
+          likes: 5400,
+          dislikes: 32,
+          comments: 876,
+        },
+      ],
+    },
+    videos: [
+      {
+        id: "UBOj6rqRUME",
+        title: "Tailwind CSS Crash Course - Build Modern Websites Without Writing CSS",
+        thumbnail: "https://i.ytimg.com/vi/UBOj6rqRUME/maxresdefault.jpg",
+        channelName: "Traversy Media",
+        channelId: "UC29ju8bIPH5as8OGnQzwJyA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s176-c-k-c0x00ffffff-no-rj",
+        views: 2300000,
+        publishedAt: "2022-05-15T08:45:00",
+        duration: 1496, // 24:56
+        category: "Technology",
+      },
+      {
+        id: "w7ejDZ8SWv8",
+        title: "React JS Crash Course 2021",
+        thumbnail: "https://i.ytimg.com/vi/w7ejDZ8SWv8/maxresdefault.jpg",
+        channelName: "Traversy Media",
+        channelId: "UC29ju8bIPH5as8OGnQzwJyA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s176-c-k-c0x00ffffff-no-rj",
+        views: 3100000,
+        publishedAt: "2021-01-18T15:30:00",
+        duration: 5400, // 1:30:00
+        category: "Technology",
+      },
+      {
+        id: "hdI2bqOjy3c",
+        title: "JavaScript Crash Course For Beginners",
+        thumbnail: "https://i.ytimg.com/vi/hdI2bqOjy3c/maxresdefault.jpg",
+        channelName: "Traversy Media",
+        channelId: "UC29ju8bIPH5as8OGnQzwJyA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s176-c-k-c0x00ffffff-no-rj",
+        views: 5800000,
+        publishedAt: "2019-03-13T14:00:00",
+        duration: 6000, // 1:40:00
+        category: "Technology",
+      },
+      {
+        id: "PBTYxXADG_k",
+        title: "MERN Stack Course - Full Stack React, Node.js, Express & MongoDB",
+        thumbnail: "https://i.ytimg.com/vi/PBTYxXADG_k/maxresdefault.jpg",
+        channelName: "Traversy Media",
+        channelId: "UC29ju8bIPH5as8OGnQzwJyA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s176-c-k-c0x00ffffff-no-rj",
+        views: 1200000,
+        publishedAt: "2022-08-10T12:45:00",
+        duration: 10800, // 3:00:00
+        category: "Technology",
+      },
+      {
+        id: "JJSoEo8JSnc",
+        title: "CSS Flexbox Tutorial - How to Build Modern Layouts",
+        thumbnail: "https://i.ytimg.com/vi/JJSoEo8JSnc/maxresdefault.jpg",
+        channelName: "Traversy Media",
+        channelId: "UC29ju8bIPH5as8OGnQzwJyA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s176-c-k-c0x00ffffff-no-rj",
+        views: 2700000,
+        publishedAt: "2022-05-05T16:20:00",
+        duration: 1232, // 20:32
+        category: "Technology",
+      },
+      {
+        id: "SLfhMPSQ9U0",
+        title: "Next.js Crash Course 2023",
+        thumbnail: "https://i.ytimg.com/vi/SLfhMPSQ9U0/maxresdefault.jpg",
+        channelName: "Traversy Media",
+        channelId: "UC29ju8bIPH5as8OGnQzwJyA",
+        channelAvatar:
+          "https://yt3.googleusercontent.com/ytc/APkrFKYcYswt_UhD7D0j6ddiQz6Gb8Q_vSJOjhYI0CoXSw=s176-c-k-c0x00ffffff-no-rj",
+        views: 980000,
+        publishedAt: "2023-02-22T14:15:00",
+        duration: 7200, // 2:00:00
+        category: "Technology",
+      },
+    ],
+  },
+}
+
+// Function to get channel data by ID
+export const getChannelData = (channelId) => {
+  // Default to Fireship if no channel ID is provided or if the channel doesn't exist
+  const defaultChannelId = "UCsBjURrPoezykLs9EqgamOA"
+  const id = channelId || defaultChannelId
+
+  return channelsData[id] || channelsData[defaultChannelId]
+}
+
+
+

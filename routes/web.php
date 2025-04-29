@@ -23,5 +23,33 @@ Route::middleware('auth')->group(function () {
 Route::get('/blips', function () {
     return Inertia::render('Blips');
 })->name('blips');
+Route::get('/channel', function () {
+    return Inertia::render('Channelpage');
+})->name('channel');
+
+// studio pages
+Route::get('/create-channel', function () {
+    return Inertia::render('CreateChannel');
+})->name('create-channel');
+
+Route::get('/studio/content', function () {
+    return Inertia::render('studio/Content');
+})->name('studio.content');
+
+Route::get('/studio/dashboard', function () {
+    return Inertia::render('studio/Dashboard');
+})->name('studio.dashboard');
+
+
+Route::middleware(['auth', 'verified'])->prefix('settings')->group(function () {
+    Route::get('/', fn() => Inertia::render('SettingsPage'))->name('settings');
+    Route::get('/account', fn() => Inertia::render('SettingsPage'))->name('settings.account');
+    Route::get('/notifications', fn() => Inertia::render('SettingsPage'))->name('settings.notifications');
+    Route::get('/privacy', fn() => Inertia::render('SettingsPage'))->name('settings.privacy');
+    Route::get('/playback', fn() => Inertia::render('SettingsPage'))->name('settings.playback');
+    Route::get('/appearance', fn() => Inertia::render('SettingsPage'))->name('settings.appearance');
+    Route::get('/downloads', fn() => Inertia::render('SettingsPage'))->name('settings.downloads');
+    Route::get('/advanced', fn() => Inertia::render('SettingsPage'))->name('settings.advanced');
+});
 
 require __DIR__.'/auth.php';

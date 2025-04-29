@@ -22,7 +22,7 @@ const AppProvidersWrapper = ({ children }) => {
 export const AppProviders = ({ children }) => (
   <ThemeProvider>
     <AppProvidersWrapper>
-    <DataProvider>{children}</DataProvider>
-      </AppProvidersWrapper>
+      <DataProvider>{children}</DataProvider>
+    </AppProvidersWrapper>
   </ThemeProvider>
 );

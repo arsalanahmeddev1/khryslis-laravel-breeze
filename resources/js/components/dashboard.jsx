@@ -1,6 +1,6 @@
 
 import { Link } from '@inertiajs/react'
-import MyContext from '../router/context'
+import MyContext from '../contexts/context';
 import { useContext } from 'react'
 import { useState, useEffect } from 'react'
 import Skeleton from "react-loading-skeleton";
@@ -27,15 +27,15 @@ const Dashboard = ({ isSettingDashboard }) => {
                 </div>
             ) : !isSettingDashboard ? (
                 sideBarItems?.map((group, index) => (
-                    <div key={`group-${index}`} className={`text-black ${index === 1 && 'mt-6'}`}>
+                    <div key={`group-${index}`} className={`text-black dark:text-white ${index === 1 && 'mt-6'}`}>
                         {group?.map((item) => (
                             <div key={item.path} className="flex flex-col pb-[20px]">
                                 <Link
                                     to={item.path}
-                                    className="flex gap-x-2 text-black py-[6px] items-center text-sm hover:text-transparent bg-clip-text bg-gradient-to-r from-[#00E9EE] via-[#5194EC] to-[#D414EE]"
+                                    className="flex gap-x-2 text-black dark:text-white py-[6px] items-center text-sm hover:text-transparent bg-clip-text bg-gradient-to-r from-[#00E9EE] via-[#5194EC] to-[#D414EE]"
                                 >
-                                    <img src={item.iconLight} alt="" className="w-4 hidden" />
-                                    <img src={item.iconDark} alt="" className="w-4 block" />
+                                    <img src={item.iconLight} alt="" className="w-4 hidden dark:block" />
+                                    <img src={item.iconDark} alt="" className="w-4 block dark:hidden" />
                                     <span className="capitalize">{item.title}</span>
                                 </Link>
                             </div>

@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react"
-import { Link } from '@inertiajs/react'
+import { Link, usePage } from '@inertiajs/react';
 import StudioSidebar from "./StudioSidebar"
-import { useLocation } from "react-router-dom"
 
 const StudioLayout = ({ children, title }) => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const location = useLocation()
+  const location = usePage()
 
   useEffect(() => {
     const checkMobile = () => {
@@ -47,7 +46,8 @@ const StudioLayout = ({ children, title }) => {
 
   // Get current page title based on route
   const getPageTitle = () => {
-    const path = location.pathname
+    const path = location.url
+
     if (path.includes("/dashboard")) return "Channel Dashboard"
     if (path.includes("/content")) return "Content"
     if (path.includes("/analytics")) return "Analytics"
