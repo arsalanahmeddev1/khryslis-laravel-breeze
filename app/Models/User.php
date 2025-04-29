@@ -60,4 +60,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         $this->notify(new CustomResetPassword($token));
     }
+
+    public function channels()
+    {
+        return $this->hasMany(Channel::class);
+    }
 }

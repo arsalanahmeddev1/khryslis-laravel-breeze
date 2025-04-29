@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react";
 import { usePage } from '@inertiajs/react';
-import ChannelHeader from "../components/channel/ChannelHeader"
-import ChannelTabs from "../components/channel/ChannelTabs"
-import VideoGrid from "../components/channel/VideoGrid"
-import AboutTab from "../components/channel/AboutTab"
-import PlaylistsTab from "../components/channel/PlaylistsTab"
-import CommunityTab from "../components/channel/CommunityTab"
-import { getChannelData } from "../data"
-import Skeleton from "react-loading-skeleton"
-import "react-loading-skeleton/dist/skeleton.css"
-import Layout from "../components/Layouts/Layout"
+import ChannelHeader from "../components/channel/ChannelHeader";
+import ChannelTabs from "../components/channel/ChannelTabs";
+import VideoGrid from "../components/channel/VideoGrid";
+import AboutTab from "../components/channel/AboutTab";
+import PlaylistsTab from "../components/channel/PlaylistsTab";
+import CommunityTab from "../components/channel/CommunityTab";
+import { getChannelData } from "../data";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import Layout from "../components/Layouts/Layout";
+
 
 const ChannelPage = () => {
   const { channelId } = usePage()

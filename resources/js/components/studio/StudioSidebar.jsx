@@ -5,7 +5,7 @@ import { useData } from "../../contexts/DataContext";
 
 const StudioSidebar = ({ collapsed, onClose, isMobile }) => {
   const [isLoading, setIsLoading] = useState(true)
-  const location = usePage()
+  const {url} = usePage()
   const { currentChannel } = useData()
 
   useEffect(() => {
@@ -130,7 +130,7 @@ const StudioSidebar = ({ collapsed, onClose, isMobile }) => {
           {/* Main Navigation */}
           <nav className="px-2 space-y-1">
             {studioNavItems.map((item) => {
-              const isActive = location.pathname === item.path || location.pathname.startsWith(`${item.path}/`)
+              const isActive = url === item.path || url.startsWith(`${item.path}/`)
               return (
                 <Link
                   key={item.path}

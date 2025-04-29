@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChannelController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -50,6 +51,11 @@ Route::middleware(['auth', 'verified'])->prefix('settings')->group(function () {
     Route::get('/appearance', fn() => Inertia::render('SettingsPage'))->name('settings.appearance');
     Route::get('/downloads', fn() => Inertia::render('SettingsPage'))->name('settings.downloads');
     Route::get('/advanced', fn() => Inertia::render('SettingsPage'))->name('settings.advanced');
+});
+
+// channel
+Route::middleware(['auth'])->group(function () {
+    Route::resource('channels', ChannelController::class);
 });
 
 require __DIR__.'/auth.php';
