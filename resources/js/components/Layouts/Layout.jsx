@@ -52,7 +52,7 @@
     }
 
     return (
-      <div className="flex flex-col h-screen bg-white text-white dark:text-white dark:bg-[#0f0f0f]">
+      <div className="flex flex-col h-screen bg-app text-app">
         <Header searchQuery={searchQuery} onSearchChange={onSearchChange} onMenuClick={toggleSidebar} />
         <div className="flex flex-1 overflow-hidden relative">
           <Sidebar

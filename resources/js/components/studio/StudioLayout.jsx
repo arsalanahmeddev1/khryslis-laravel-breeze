@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Link, usePage } from '@inertiajs/react';
 import StudioSidebar from "./StudioSidebar"
+import Header from "../../components/header";
 
 const StudioLayout = ({ children, title }) => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
@@ -62,7 +63,7 @@ const StudioLayout = ({ children, title }) => {
   return (
     <div className="flex flex-col h-screen bg-white text-black">
       {/* Studio Header */}
-      <header className="bg-white border-b border-gray-200 h-16 flex items-center px-4">
+      {/* <header className="bg-white border-b border-gray-200 h-16 flex items-center px-4">
         <button
           onClick={toggleSidebar}
           className="p-2 rounded-md text-gray-500 hover:text-gray-900 focus:outline-none"
@@ -119,7 +120,8 @@ const StudioLayout = ({ children, title }) => {
             <span className="sr-only">User menu</span>
           </button>
         </div>
-      </header>
+      </header> */}
+      <Header />
 
       <div className="flex flex-1 overflow-hidden">
         <StudioSidebar
@@ -132,7 +134,7 @@ const StudioLayout = ({ children, title }) => {
           }}
         />
 
-        <main className="flex-1 overflow-y-auto p-4 md:p-6">{children}</main>
+        <main className="flex-1 overflow-y-auto p-4 md:p-6 dark:bg-black bg-white">{children}</main>
       </div>
     </div>
   )

@@ -53,8 +53,8 @@ const Dashboard = () => {
     <StudioLayout title="Dashboard">
       <div className="space-y-6">
         {/* Channel Overview */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
-          <h2 className="text-xl font-bold mb-4">Channel Overview</h2>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 border-app">
+          <h2 className="text-xl font-bold mb-4 dark:text-white text-black">Channel Overview</h2>
 
           {loading ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -68,29 +68,29 @@ const Dashboard = () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-                <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">Total Views</h3>
-                <p className="text-2xl font-bold mt-1">{stats.totalViews.toLocaleString()}</p>
+                <h3 className="text-sm font-medium text-app">Total Views</h3>
+                <p className="text-2xl font-bold mt-1 text-subtle">{stats.totalViews.toLocaleString()}</p>
               </div>
               <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-                <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">Subscribers</h3>
-                <p className="text-2xl font-bold mt-1">{stats.totalSubscribers.toLocaleString()}</p>
+                <h3 className="text-sm font-medium text-app">Subscribers</h3>
+                <p className="text-2xl font-bold mt-1 text-subtle">{stats.totalSubscribers.toLocaleString()}</p>
               </div>
               <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-                <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">Videos</h3>
-                <p className="text-2xl font-bold mt-1">{stats.totalVideos.toLocaleString()}</p>
+                <h3 className="text-sm font-medium text-app">Videos</h3>
+                <p className="text-2xl font-bold mt-1 text-subtle">{stats.totalVideos.toLocaleString()}</p>
               </div>
               <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg">
-                <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">Watch Time (mins)</h3>
-                <p className="text-2xl font-bold mt-1">{stats.watchTime.toLocaleString()}</p>
+                <h3 className="text-sm font-medium text-app">Watch Time (mins)</h3>
+                <p className="text-2xl font-bold mt-1 text-subtle">{stats.watchTime.toLocaleString()}</p>
               </div>
             </div>
           )}
         </div>
 
         {/* Recent Videos */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 border-app">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-xl font-bold">Recent Videos</h2>
+            <h2 className="text-xl font-bold text-app">Recent Videos</h2>
             <Link href="/studio/content" className="text-sm text-purple-600 dark:text-purple-400 hover:underline">
               See all
             </Link>
@@ -186,7 +186,7 @@ const Dashboard = () => {
 
         {/* Top Performing Videos */}
         {!loading && topVideos.length > 0 && (
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 border-app">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-xl font-bold">Top Performing Videos</h2>
               <Link href="/studio/analytics" className="text-sm text-purple-600 dark:text-purple-400 hover:underline">
@@ -231,8 +231,8 @@ const Dashboard = () => {
         )}
 
         {/* Quick Actions */}
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
-          <h2 className="text-xl font-bold mb-4">Quick Actions</h2>
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 border-app">
+          <h2 className="text-xl font-bold mb-4 text-app">Quick Actions</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
@@ -252,7 +252,7 @@ const Dashboard = () => {
                   d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"
                 />
               </svg>
-              <span className="text-sm font-medium">Upload Video</span>
+              <span className="text-sm font-medium text-app">Upload Video</span>
             </Link>
 
             <Link
@@ -272,7 +272,7 @@ const Dashboard = () => {
                   d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
                 />
               </svg>
-              <span className="text-sm font-medium">Create Short</span>
+              <span className="text-sm font-medium text-app">Create Short</span>
             </Link>
 
             <Link
@@ -292,7 +292,7 @@ const Dashboard = () => {
                   d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
                 />
               </svg>
-              <span className="text-sm font-medium">View Analytics</span>
+              <span className="text-sm font-medium text-app">View Analytics</span>
             </Link>
 
             <Link
@@ -312,7 +312,7 @@ const Dashboard = () => {
                   d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"
                 />
               </svg>
-              <span className="text-sm font-medium">Customize Channel</span>
+              <span className="text-sm font-medium text-app">Customize Channel</span>
             </Link>
           </div>
         </div>

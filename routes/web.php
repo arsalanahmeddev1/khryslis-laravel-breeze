@@ -13,6 +13,10 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
+})->name('home');
+
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -54,8 +58,9 @@ Route::middleware(['auth', 'verified'])->prefix('settings')->group(function () {
 });
 
 // channel
-Route::middleware(['auth'])->group(function () {
-    Route::resource('channels', ChannelController::class);
-});
+// Route::middleware(['auth'])->group(function () {
+//     Route::resource('channels', ChannelController::class);
+// });
+Route::post('/channels', [ChannelController::class, 'store'])->name('channels.store');
 
 require __DIR__.'/auth.php';

@@ -95,14 +95,14 @@ export default function App() {
                 </div>
                 <div className="w-full px-1 py-[2px] mt-2">
                   <div className="flex justify-between items-center mb-2">
-                    <span className="block text-black">
+                    <span className="block text-subtle">
                       {item.streamer}
                     </span>
-                    <span className="block text-black">
+                    <span className="block text-subtle">
                       {item.viewers} viewers
                     </span>
                   </div>
-                  <span className="block text-black font-thin mb-2">
+                  <span className="block text-subtle font-thin mb-2">
                     {item.category}
                   </span>
                   <div className="flex gap-x-2 gap-y-1 flex-wrap">
@@ -115,7 +115,7 @@ export default function App() {
                       </span>
                     ))}
                   </div>
-                  <p className="text-sm text-black mt-2">
+                  <p className="text-sm text-black mt-2 text-app">
                     {item.description}
                   </p>
                 </div>

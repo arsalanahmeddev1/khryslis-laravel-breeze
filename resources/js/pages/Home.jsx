@@ -155,17 +155,17 @@
           </div>
         )}
         <div className="mt-5">
-          <h1 className="font-semibold border-b-2 text-white-false relative top-[1px] w-fit border-blue-600 z-10 text-black">Live</h1>
+          <h1 className="font-semibold border-b-2 text-white-false relative top-[1px] w-fit border-blue-600 z-10 text-app">Live</h1>
           <LiveSlider />
         </div>
 
         <div className="text-white-false mt-5">
-          <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10 text-black">Blips</h1>
+          <h1 className="font-semibold border-b-2 relative top-[1px] w-fit border-blue-600 z-10 text-app">Blips</h1>
           <SlidersBlips data={blipLinks} blips={true} />
         </div>
 
         <div className="text-white-false mt-5">
-          <h1 className="font-semibold border-b-2 uppercase relative top-[1px] w-fit border-blue-600 z-10 text-black">Recommended</h1>
+          <h1 className="font-semibold border-b-2 uppercase relative top-[1px] w-fit border-blue-600 z-10 text-app">Recommended</h1>
           <CustomSlider details={true} />
         </div>
       </Layout>

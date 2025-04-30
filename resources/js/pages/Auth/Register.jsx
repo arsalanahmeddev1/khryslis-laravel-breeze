@@ -23,9 +23,9 @@ export default function Register() {
 
     return (
         <GuestLayout>
-             <div className="max-w-md mx-auto mt-10">
-             <h1 className="text-2xl mb-6 font-semibold text-black ">Register</h1>
-             </div>
+            <div className="max-w-md mx-auto mt-10">
+                <h1 className="text-2xl mb-6 font-semibold text-black ">Register</h1>
+            </div>
             <Head title="Register" />
 
             <form onSubmit={submit} className="space-y-4">

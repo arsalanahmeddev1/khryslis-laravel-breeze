@@ -4,44 +4,42 @@ namespace App\Http\Controllers;
 
 use App\Models\Channel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
 
 class ChannelController extends Controller
 {
+
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
+        $validated = $request->validate([
+            'name' => 'required|string',
             'description' => 'nullable|string',
-            'profile' => 'nullable|image|max:2048',
-            'banner' => 'nullable|image|max:2048',
+            'profile' => 'nullable|image',
+            'banner' => 'nullable|image',
         ]);
-
-        $slug = Str::slug($request->name);
-
-        // Ensure slug uniqueness
-        $count = Channel::where('slug', 'like', "$slug%")->count();
-        if ($count > 0) {
-            $slug .= '-' . ($count + 1);
-        }
 
         $profilePath = null;
         $bannerPath = null;
+
         if ($request->hasFile('profile')) {
-            $profilePath = $request->file('profile')->store('channel-profiles', 'public');
-        }
-        if ($request->hasFile('banner')) {
-            $bannerPath = $request->file('banner')->store('channel-banners', 'public');
+            $profilePath = $request->file('profile')->store('profiles', 'public');
         }
 
-        $channel = Channel::create([
-            'user_id' => auth()->id(),
-            'name' => $request->name,
-            'description' => $request->description,
-            'slug' => $slug,
-            'profile' => $profilePath,
+        if ($request->hasFile('banner')) {
+            $bannerPath = $request->file('banner')->store('banners', 'public');
+        }
+
+        Channel::create([
+            'name' => $validated['name'],
+            'slug' => Str::slug($validated['name']), 
+            'user_id' => Auth::id(),
+            'description' => $validated['description'] ?? null,
+            'profile' => $profilePath,  
             'banner' => $bannerPath,
         ]);
 
-        return redirect()->route('channels.show', $channel->slug)->with('success', 'Channel created successfully.');
+        return redirect()->route('create-channel')->with('success', 'Channel created!');
     }
 }

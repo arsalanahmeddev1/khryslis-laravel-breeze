@@ -100,14 +100,14 @@ export default function Slider(props) {
                   )}
                   {!props?.blips && !props?.liveNews && (
                     <div className="absolute w-full h-full">
-                      <span className="bg-black-false text-white-false block rounded-full float-right py-1 px-3 text-xs mr-3 mt-3">
+                      <span className="bg-black-false text-app block rounded-full float-right py-1 px-3 text-xs mr-3 mt-3">
                         {val?.duration}
                       </span>
                       <div className="absolute bottom-2 flex flex-col ml-3">
-                        <span className="bg-black-false w-fit text-white-false block rounded-full float-right py-1 px-3 text-xs mr-3 mt-3">
+                        <span className="bg-black-false w-fit text-app block rounded-full float-right py-1 px-3 text-xs mr-3 mt-3">
                           {val?.category}
                         </span>
-                        <h1 className="text-white-false font-semibold pl-2">
+                        <h1 className="text-app font-semibold pl-2 ">
                           The best game of all time
                         </h1>
                         <div className="flex items-center gap-x-1 pl-2">
@@ -129,7 +129,7 @@ export default function Slider(props) {
                 {!props?.blips && (
                   <div className="flex flex-col gap-y-2">
                     <div className="flex items-center gap-x-2">
-                      <span className="text-[13px] font-bold text-black">
+                      <span className="text-[13px] font-bold text-app">
                         {val?.title}
                       </span>
                     </div>
@@ -159,14 +159,14 @@ export default function Slider(props) {
                   <div className="flex items-start gap-x-2">
                     <img src={profileBlips} alt="" className="w-12" />
                     <div className="flex gap-y-2 flex-col">
-                      <span className="text-[13px] font-bold text-black max-w-[270px]">
+                      <span className="text-[13px] font-bold text-app max-w-[270px]">
                         {val?.title}
                       </span>
                       <div>
-                        <span className="block font-thin text-xs text-black">
+                        <span className="block font-thin text-xs text-subtle">
                           {val?.userName}
                         </span>
-                        <span className="block font-thin text-xs text-black">
+                        <span className="block font-thin text-xs text-subtle">
                           {val?.timeAgo}
                         </span>
                       </div>

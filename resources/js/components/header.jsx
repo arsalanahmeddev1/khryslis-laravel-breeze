@@ -15,21 +15,6 @@ const TopNavBar = ({ onMenuClick }) => {
   return (
     <header className="header">
       <div className="flex items-center">
-        {/* <button
-          onClick={onMenuClick}
-          className="lg:hidden menu-toggle-btn text-white"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button> */}
-
         <button className="menu-toggle-btn" onClick={onMenuClick}>
           <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
             <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
@@ -45,47 +30,39 @@ const TopNavBar = ({ onMenuClick }) => {
       <div className="auth-btn-wrapper">
         <div className="hidden sm:ms-6 sm:flex sm:items-center">
           <div className="relative ms-3">
-            <Dropdown>
-              <Dropdown.Trigger>
-                <span className="inline-flex rounded-md">
-                  <button
-                    type="button"
-                    className="inline-flex items-center auth-link-wrapper rounded-md border border-transparent bg-white px-3 py-2 text-sm font-medium leading-4 text-gray-500 transition duration-150 ease-in-out hover:text-gray-700 focus:outline-none"
-                  >
-                    <img src={profile} alt="Profile" />
-                    {user ? user.name : 'Log In'}
-
-                    <svg
-                      className="-me-0.5 ms-2 h-4 w-4"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
+            {user ? (
+              <Dropdown>
+                <Dropdown.Trigger>
+                  <span className="inline-flex rounded-md">
+                    <button
+                      type="button"
+                      className="inline-flex items-center justify-center auth-link-wrapper rounded-full w-[50px] h-[50px] bg-white text-gray-700 text-sm font-medium leading-4 transition duration-150 ease-in-out hover:text-gray-900 focus:outline-none"
                     >
-                      <path
-                        fillRule="evenodd"
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                </span>
-              </Dropdown.Trigger>
+                      <span className="font-semibold text-lg">
+                        {user.name.charAt(0).toUpperCase()}
+                      </span>
+                    </button>
+                  </span>
+                </Dropdown.Trigger>
 
-              <Dropdown.Content>
-                <Dropdown.Link
-                  href={route('profile.edit')}
-                >
-                  Profile
-                </Dropdown.Link>
-                <Dropdown.Link
-                  href={route('logout')}
-                  method="post"
-                  as="button"
-                >
-                  Log Out
-                </Dropdown.Link>
-              </Dropdown.Content>
-            </Dropdown>
+                <Dropdown.Content>
+                  <Dropdown.Link href={route('profile.edit')}>Profile</Dropdown.Link>
+                  <Dropdown.Link href={route('logout')} method="post" as="button">
+                    Log Out
+                  </Dropdown.Link>
+                  <Dropdown.Link href={route('create-channel')}>Create Channel</Dropdown.Link>
+                </Dropdown.Content>
+              </Dropdown>
+            ) : (
+              // If not logged in, show sign in link
+              <a
+                href={route('login')}
+                className="auth-link-wrapper inline-flex items-center gap-2 rounded-md border border-transparent bg-white px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 transition"
+              >
+                <img src={profile} alt="Profile" className="w-5 h-5" />
+                Sign In
+              </a>
+            )}
           </div>
         </div>
         {/* <button className="w-8 h-8 ml-2 rounded-full bg-purple-600 flex items-center justify-center">

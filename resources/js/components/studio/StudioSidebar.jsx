@@ -95,8 +95,8 @@ const StudioSidebar = ({ collapsed, onClose, isMobile }) => {
       {/* Studio Logo */}
       <div className="flex h-16 items-center px-4 border-b border-gray-200">
         <Link href="/studio/dashboard" className="flex items-center space-x-2">
-          {!collapsed && <span className="text-lg font-semibold text-black">Khryslis Studio</span>}
-          {collapsed && <span className="text-lg font-semibold text-black">K</span>}
+          {!collapsed && <span className="text-lg font-semibold text-app">Khryslis Studio</span>}
+          {collapsed && <span className="text-lg font-semibold text-app">K</span>}
         </Link>
       </div>
 
