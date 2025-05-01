@@ -11,7 +11,7 @@ const ToggleSwitch = ({ id, label, description, checked, onChange, disabled = fa
           disabled={disabled}
         />
         <div className={`w-[44px] h-[22px] rounded-full peer peer-focus:outline-none transition-colors duration-300
-          ${disabled ? 'bg-gray-300' : 'bg-gray-200  bg-gradient-to-r peer-checked:from-gradient-start peer-checked:to-gradient-end'}`}>
+          ${disabled ? 'bg-gray-300' : 'bg-gray-200 dark:bg-gray-700  bg-gradient-to-r peer-checked:from-gradient-start peer-checked:to-gradient-end'}`}>
           <div className={`absolute top-0.5 left-0.5 w-[17px] h-[17px] bg-white rounded-full shadow-md transform transition-transform duration-300
             ${checked ? 'translate-x-5' : ''}`}></div>
         </div>
@@ -19,13 +19,13 @@ const ToggleSwitch = ({ id, label, description, checked, onChange, disabled = fa
       <div className="ms-3 text-sm">
         <label
           htmlFor={id}
-          className={`font-medium ${disabled ? "text-gray-400" : "text-gray-900"}`}
+          className={`font-medium ${disabled ? "text-gray-400 dark:text-gray-500" : "text-gray-900 dark:text-white"}`}
         >
           {label}
         </label>
         {description && (
           <p
-            className={`text-xs mt-1 ${disabled ? "text-gray-400" : "text-gray-500"}`}
+            className={`text-xs mt-1 ${disabled ? "text-gray-400 dark:text-gray-500" : "text-gray-500 dark:text-gray-400"}`}
           >
             {description}
           </p>

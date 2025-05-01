@@ -28,9 +28,45 @@ Route::middleware('auth')->group(function () {
 Route::get('/blips', function () {
     return Inertia::render('Blips');
 })->name('blips');
+
 Route::get('/channel', function () {
     return Inertia::render('Channelpage');
 })->name('channel');
+
+Route::get('/subscriptions', function () {
+    return Inertia::render('Subscriptions');
+})->name('subscriptions');
+
+Route::get('/history', function () {
+    return Inertia::render('History');
+})->name('history');
+
+Route::get('/liked', function () {
+    return Inertia::render('liked');
+})->name('liked');
+
+Route::get('/trending', function () {
+    return Inertia::render('Trending');
+})->name('trending');
+
+Route::get('/music', function () {
+    return Inertia::render('music');
+})->name('music');
+
+Route::get('/gaming', function () {
+    return Inertia::render('GamingPage');
+})->name('gaming');
+
+Route::get('/news', function () {
+    return Inertia::render('news');
+})->name('news');
+
+// settings page
+Route::get('/settings/{section?}', function ($section = 'account') {
+    return Inertia::render('SettingsPage', [
+        'section' => $section
+    ]);
+});
 
 // studio pages
 Route::get('/create-channel', function () {
@@ -57,10 +93,6 @@ Route::middleware(['auth', 'verified'])->prefix('settings')->group(function () {
     Route::get('/advanced', fn() => Inertia::render('SettingsPage'))->name('settings.advanced');
 });
 
-// channel
-// Route::middleware(['auth'])->group(function () {
-//     Route::resource('channels', ChannelController::class);
-// });
 Route::post('/channels', [ChannelController::class, 'store'])->name('channels.store');
 
 require __DIR__.'/auth.php';

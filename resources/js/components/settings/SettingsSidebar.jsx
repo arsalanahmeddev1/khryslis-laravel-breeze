@@ -48,15 +48,15 @@ const SettingsSidebar = ({ categories, loading }) => {
           {categories.map((category) => (
             <li key={category.id}>
               <Link
-                href={category.path} // Changed from to to href
+                href={category.path}
                 className={`flex items-center justify-between px-3 py-2 rounded-lg transition-colors ${
-                  url === category.path
-                    ? "bg-gray-100 text-black font-medium"
-                    : "text-gray-700 hover:bg-gray-50"
+                  location.pathname === category.path
+                    ? "bg-gray-100 dark:bg-gray-800 text-black dark:text-white font-medium"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/60"
                 }`}
               >
                 <div className="flex items-center">
-                  <span className="mr-3 text-gray-500">{getIcon(category.icon)}</span>
+                  <span className="mr-3 text-gray-500 dark:text-gray-400">{getIcon(category.icon)}</span>
                   <span>{category.label}</span>
                 </div>
                 <ChevronRight size={16} className="text-gray-400" />
@@ -66,7 +66,7 @@ const SettingsSidebar = ({ categories, loading }) => {
         </ul>
       </nav>
     </div>
-  );
+  )
 };
 
 export default SettingsSidebar;

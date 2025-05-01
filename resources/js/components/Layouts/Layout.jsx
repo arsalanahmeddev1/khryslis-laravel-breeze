@@ -67,8 +67,7 @@
           <main className={`flex-1 ${!noScroll ? "overflow-y-auto" : ""} w-full transition-all duration-300`}>
             <SearchBar className="block lg:hidden mt-[10px]"/>
             <div className={`${className} mx-auto px-4 md:px-6`}>
-              {title && <h1 className="text-xl md:text-2xl font-bold mb-4 text-black">{title}</h1>}
-              
+              {title && <h1 className="text-xl md:text-2xl font-bold mb-4 pt-5 text-app">{title}</h1>}
               {children}
             </div>
           </main>

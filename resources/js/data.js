@@ -46,12 +46,7 @@ export const sideBarItems = [
       iconDark: followersDark,
       path: "/subscriptions"
     },
-    //  {
-    //   title: "library",
-    //   iconLight: library,
-    //   iconDark: libraryDark,
-    //   path: "/library",
-    // },
+    
      {
       title: "history",
       iconLight: history,

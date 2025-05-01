@@ -40,15 +40,15 @@ const ChannelHeader = ({ channel, isSubscribed, onSubscribe }) => {
         
         {/* Channel Details */}
         <div className="flex-1">
-          <h1 className="text-xl md:text-2xl font-bold">{channel.name}</h1>
-          <div className="text-sm text-gray-600 mt-1">
-            <span>{formatSubscriberCount(channel.subscribers)} subscribers</span>
+          <h1 className="text-xl md:text-2xl font-bold text-app">{channel.name}</h1>
+          <div className="text-sm text-app mt-1">
+            <span className="">{formatSubscriberCount(channel.subscribers)} subscribers</span>
             {channel.videoCount && (
               <span className="ml-2">• {channel.videoCount} videos</span>
             )}
           </div>
           {channel.customUrl && (
-            <div className="text-sm text-gray-600 mt-1">
+            <div className="text-sm text-subtle mt-1">
               {channel.customUrl}
             </div>
           )}
@@ -59,7 +59,7 @@ const ChannelHeader = ({ channel, isSubscribed, onSubscribe }) => {
           {isSubscribed ? (
             <div className="flex">
               <button 
-                className="bg-gray-200 text-black px-4 py-2 rounded-l-full font-medium hover:bg-gray-300 transition"
+                className="auth-link-wrapper"
                 onClick={onSubscribe}
               >
                 Subscribed

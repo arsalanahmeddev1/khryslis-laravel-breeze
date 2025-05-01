@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, usePage, router } from '@inertiajs/react';
+import { Link, usePage, useForm, router as inertiaRouter } from '@inertiajs/react';
 import Layout from "../components/Layouts/Layout";
 import SettingsSidebar from "../components/settings/SettingsSidebar";
 import AccountSettings from "../components/settings/AccountSettings";
@@ -15,8 +15,9 @@ import "react-loading-skeleton/dist/skeleton.css";
 const SettingsPage = () => {
   const [loading, setLoading] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const router = router();
+  const router = inertiaRouter;
   const { url } = usePage();
+  const { section } = usePage().props;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -43,7 +44,7 @@ const SettingsPage = () => {
     if (url === "/settings") {
       router.visit("/settings/account");
     }
-  }, [url, router]);
+  }, [url]);
 
   const renderSettingsComponent = () => {
     if (loading) {
@@ -61,23 +62,23 @@ const SettingsPage = () => {
       );
     }
 
-    switch (url) {
-      case "/settings/account":
+    switch (section) {
+      case "account":
         return <AccountSettings />;
-      case "/settings/notifications":
+      case "notifications":
         return <NotificationSettings />;
-      case "/settings/privacy":
+      case "privacy":
         return <PrivacySettings />;
-      case "/settings/playback":
+      case "playback":
         return <PlaybackSettings />;
-      case "/settings/appearance":
+      case "appearance":
         return <AppearanceSettings />;
-      case "/settings/downloads":
+      case "downloads":
         return <DownloadsSettings />;
-      case "/settings/advanced":
+      case "advanced":
         return <AdvancedSettings />;
       default:
-        return <AccountSettings />; // Fallback
+        return <AccountSettings />;
     }
   };
 
@@ -106,9 +107,8 @@ const SettingsPage = () => {
         </div>
         <div className="flex flex-col md:flex-row">
           <div
-            className={`${
-              mobileMenuOpen ? "block" : "hidden"
-            } md:block md:w-64 lg:w-72 border-r border-gray-200 dark:border-gray-800 md:sticky md:top-0 md:h-screen`}
+            className={`${mobileMenuOpen ? "block" : "hidden"
+              } md:block md:w-64 lg:w-72 border-r border-gray-200 dark:border-gray-800 md:sticky md:top-0 md:h-screen`}
           >
             <SettingsSidebar categories={settingsCategories} loading={loading} />
           </div>

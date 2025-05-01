@@ -50,7 +50,13 @@ const TopNavBar = ({ onMenuClick }) => {
                   <Dropdown.Link href={route('logout')} method="post" as="button">
                     Log Out
                   </Dropdown.Link>
-                  <Dropdown.Link href={route('create-channel')}>Create Channel</Dropdown.Link>
+                  {user?.channels?.length > 0 ? (
+                    <Dropdown.Link href={route('channel')}>Your Channel</Dropdown.Link>
+                  ) : (
+                    <Dropdown.Link href={route('create-channel')}>Create Channel</Dropdown.Link>
+                  )
+                
+                }
                 </Dropdown.Content>
               </Dropdown>
             ) : (
